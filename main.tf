@@ -11,4 +11,3 @@ module "sg" {
   source = "./module/sg"
 }
 
-
