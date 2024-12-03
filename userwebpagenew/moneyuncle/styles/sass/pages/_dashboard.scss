@@ -1,0 +1,72 @@
+.dashboard {
+  .promo-box {
+    padding: 2rem 2.5rem;
+
+    .fa-angle-right {
+      font-size: 2rem;
+    }
+
+    .title {
+      .img-box {
+        background: #E5EAF0;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        margin: 0;
+      }
+    }
+
+    .content {
+      h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: #000000;
+        margin-bottom: 0.5rem;
+
+        .pending {
+          background: #F35F5F;
+          border-radius: 2px;
+          padding: 3px 5px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          letter-spacing: -0.02em;
+          color: #FFF9F9;
+          vertical-align: middle;
+          margin-left: 0.5rem;
+        }
+
+        .super-access {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          color: #F35F5F;
+        }
+      }
+
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #88919A;
+
+        @include respond(phone-both) {
+          font-size: 1.5rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}

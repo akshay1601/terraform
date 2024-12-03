@@ -1,0 +1,590 @@
+/* Header */
+header.ad-header {
+
+  .navbar {
+    background-color: $color-white;
+
+    @include respond(tab) {
+      padding: 1.5rem 0;
+    }
+
+    .navbar-toggler {
+      display: none;
+
+      @include respond(phone-both) {
+        display: block;
+      }
+    }
+
+    &-brand {
+      margin-right: 0;
+
+      @include respond(phone-both) {
+        margin-top: 0rem;
+      }
+    }
+
+    &-nav {
+      @include respond(phone-both) {
+        padding-top: 1rem;
+      }
+
+      .nav {
+        &-item {
+          background: $color-white;
+          border: 2px solid $color-primary-advisor;
+          border-radius: 40px;
+          margin-right: 1rem;
+
+          @include respond(tab) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          @include respond(phone-both) {
+            margin-bottom: 1rem;
+            margin-right: 0rem;
+          }
+        }
+
+        &-link {
+          font-size: 1.6rem;
+          line-height: 1.92rem;
+          color: $color-black;
+          padding: 1.5rem 3rem;
+
+          @include respond(tab) {
+            padding: 1.3rem 1.2rem;
+          }
+
+
+        }
+      }
+    }
+  }
+
+  .nav-item--img {
+    color: $color-primary-advisor;
+    border: 1px solid $color-grey-light-3;
+    border-radius: 29px;
+
+    @include respond(phone-both) {
+      position: absolute;
+      right: 55px;
+      top: 50%;
+      margin-top: -22px;
+    }
+
+    @include respond(phone-small) {
+      right: 45px;
+    }
+  }
+
+  .nav-link--img {
+    padding: 0 2.1rem 0 1.4rem;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #4BC87F;
+
+    @include respond(tab) {
+      display: none;
+    }
+
+    @include respond(phone-both) {
+      display: none;
+    }
+  }
+
+  .nav-img {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .profile {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: $color-grey-light-5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(tab) {
+        width: 42px;
+        height: 42px;
+      }
+
+      @include respond(phone-both) {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}
+
+
+
+/* download footer */
+.download-subFooter {
+  background: $color-primary-advisor;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+
+  @include respond(phone-both) {
+    padding: 5rem 2rem 0;
+  }
+
+  @include respond(tab) {
+    padding: 5rem 0 0;
+  }
+
+  .download {
+    &__title {
+      font-size: 4rem;
+      line-height: 4.8rem;
+      color: $color-black;
+      font-weight: normal;
+
+      @include respond(phone-both) {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+
+      @include respond(medium-desktop) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+      }
+
+      span {
+        color: $color-white;
+        font-weight: bold;
+
+        @include respond(phone-both) {
+          display: block;
+        }
+      }
+    }
+
+    &__subtitle {
+      font-size: 2.6rem;
+      line-height: 3.1rem;
+      padding: 1rem 0 3rem 0;
+      color: $color-white;
+
+      @include respond(phone-both) {
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        padding: 3rem 0;
+      }
+
+      @include respond(medium-desktop) {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        &:first-child {
+          margin-right: 2rem;
+        }
+
+        @include respond(phone-both) {
+          width: 50%;
+        }
+      }
+    }
+
+    &__img {
+      position: absolute;
+      bottom: -5rem;
+      right: 50px;
+
+      @include respond(medium-desktop) {
+        right: 0;
+      }
+
+      @include respond(tab) {
+        position: relative;
+        bottom: -6rem;
+        right: auto;
+      }
+
+      @include respond(phone-both) {
+        position: relative;
+        bottom: -6rem;
+        right: auto;
+      }
+    }
+  }
+}
+
+.ad-experts-home {
+  @include respond(tab) {
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+  }
+
+  @include respond(phone-both) {
+    padding-top: 10rem;
+  }
+
+  /* common css*/
+  .heading-primary {
+    &--main {
+      font-size: 4rem;
+      line-height: 5.6rem;
+      color: $color-black;
+      font-weight: bold;
+
+      @include respond(tab) {
+        font-size: 3rem;
+        line-height: 4.6rem;
+      }
+    }
+
+    &--sub {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      color: rgba(0, 0, 0, .5);
+
+      @include respond(phone-both) {
+        font-size: 2.6rem;
+        line-height: 3.5rem;
+      }
+
+      &--green {
+        color: $color-primary-advisor;
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  .heading-secondary {
+    font-size: 5rem;
+    line-height: 6rem;
+    color: $color-primary-advisor;
+
+    @include respond(phone-both) {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+
+  .keypoint {
+
+    &__item {
+      position: relative;
+      padding-left: 20px;
+
+      @include respond(phone-small) {
+        padding-left: 14px;
+      }
+
+      &::before {
+        content: "";
+        background-color: $color-primary-advisor;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 0;
+
+        @include respond(phone-both) {
+          top: 5px;
+        }
+
+        @include respond(phone-small) {
+          width: 7px;
+          height: 7px;
+          top: 4px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__text {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      color: $color-black;
+      display: inline-block;
+
+      @include respond(phone-both) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+
+  /* home section */
+  .section-home {
+    background: #F1F1F1;
+    padding: 10rem;
+
+    @include respond(phone-both) {
+      padding: 5rem 0 0rem 0;
+    }
+
+    @include respond(tab) {
+      padding: 5rem;
+    }
+
+    .heading-primary--sub {
+      padding: 3rem 0 4rem 0;
+    }
+
+    .home {
+
+
+      &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+
+        @include respond(phone-both) {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+      }
+
+      &__textBox {
+        width: 55%;
+
+        @include respond(tab) {
+          width: 48%;
+        }
+
+        @include respond(phone-both) {
+          width: 100%;
+          margin-bottom: 5rem;
+          padding: 0 2rem;
+        }
+      }
+
+      &__formBox {
+        width: 42%;
+        background: $color-white;
+
+        @include respond(phone-both) {
+          width: 100%;
+          margin-bottom: 5rem
+        }
+
+        @include respond(tab) {
+          width: 48%;
+          margin-bottom: 5rem
+        }
+      }
+
+      &__img {
+        position: absolute;
+        bottom: -10rem;
+        left: 12rem;
+
+        @include respond(phone-both) {
+          bottom: auto;
+          left: auto;
+          position: relative;
+          margin: 0 auto;
+        }
+
+        @include respond(tab) {
+          bottom: -5rem;
+          left: 1rem;
+        }
+
+        img {
+          @include respond(phone-both) {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+          }
+
+          @include respond(tab) {
+            width: 60%;
+          }
+        }
+      }
+
+      &__form {
+        padding: 5rem;
+
+        @include respond(phone-both) {
+          padding: 5rem 2rem;
+        }
+
+        .form-title {
+          font-size: 2.4rem;
+          line-height: 2.8rem;
+          color: $color-black;
+          font-weight: bold;
+          padding-bottom: 3.2rem;
+        }
+
+        .form-label {
+          font-size: 2rem;
+          line-height: 2.8rem;
+          color: $color-black;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+
+        .form-ad-btn {
+          padding: 2rem;
+          width: 100%;
+          color: $color-white;
+          background: $color-primary-advisor;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          margin-top: 1rem;
+          text-align: center;
+        }
+
+        .form-group {
+          margin-bottom: 2rem;
+        }
+
+        .form-control {
+          background: #EBF3F7;
+          border-radius: 4px;
+          height: auto;
+          padding: 1.8rem 2rem;
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+          color: $color-black;
+          border: none;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        input {
+          &::placeholder {
+            color: $color-black;
+          }
+
+          &:-ms-input-placeholder {
+            color: $color-black;
+          }
+
+          &::-ms-input-placeholder {
+            color: $color-black;
+          }
+        }
+
+        .expertise--btns {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .gray-outline-btn {
+            width: 48%;
+
+            @include respond(tab) {
+              padding: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* work section */
+  .section-work {
+    margin-bottom: 30rem;
+
+    @include respond(tab) {
+      margin-bottom: 15rem;
+    }
+
+    @include respond(phone-both) {
+      margin-bottom: 15rem;
+    }
+
+    .heading-primary--main {
+      padding-top: 6rem;
+
+      @include respond(phone-both) {
+        padding: 5rem 0;
+        text-align: center;
+      }
+    }
+
+    .work__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5rem 5rem 0 5rem;
+
+      .work__imgBox {
+        padding: 0 8rem;
+        width: 45%;
+
+        @include respond(phone-both) {
+          width: 100%;
+          padding: 0;
+
+          &:not(:last-child) {
+            padding-bottom: 5rem;
+          }
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      .work__textBox {
+        width: 45%;
+
+        @include respond(phone-both) {
+          width: 100%;
+
+          &:not(:last-child) {
+            padding-bottom: 5rem;
+          }
+        }
+
+        .heading-secondary {
+          font-size: 4rem;
+          line-height: 5rem;
+          margin: 1rem 0 3rem 0;
+        }
+      }
+
+      @include respond(phone-both) {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem 2.5rem;
+        background: #F1F1F1;
+        box-shadow: 0px 1px 0px #d9e3ee;
+        border: 1px solid #F1F1F1;
+        border-radius: 10px;
+        margin-bottom: 5rem;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 15px;
+  width: 795px;
+  background: $color-white;
+  border: 2px solid $color-grey-light-1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+
+  @include respond(medium-desktop) {
+    width: 600px;
+  }
+
+  @include respond(phone-both) {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 15px 0 0;
+  }
+
+  @include respond(tab) {
+    width: 70%;
+    padding: 10px 15px;
+    margin: 15px 0;
+  }
+
+  @include respond(phone-small) {
+    margin: 10px 0 0;
+  }
+
+  .icon {
+    margin-right: 15px;
+    font-size: 1.6rem;
+
+    @include respond(phone-both) {
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+
+    @include respond(tab) {
+      margin-right: 15px;
+      font-size: 1.5rem;
+    }
+  }
+
+  .search-input {
+    font-family: $font-GothamBook;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-20;
+    line-height: 2.8rem;
+    border: 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: $color-black;
+    width: 100%;
+
+    @include respond(phone-both) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+
+    @include respond(tab) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
+  }
+}

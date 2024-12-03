@@ -1,0 +1,6 @@
+// Extra large devices (large desktops, 1441px and up)
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1440px;
+  }
+}

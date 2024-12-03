@@ -1,0 +1,203 @@
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+.primary-btn {
+  font-family: $font-roboto;
+  color: $color-white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size-18;
+  line-height: 2.1rem;
+  text-align: center;
+  padding: 1.5rem 3.5rem;
+  background: $color-primary;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &--normal {
+    font-weight: normal;
+  }
+
+  &:hover {
+    background: $color-primary;
+    color: $color-white;
+  }
+}
+
+.green-btn {
+  font-family: $font-roboto;
+  color: $color-white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-18;
+  line-height: 2.1rem;
+  padding: 1.5rem 3.5rem;
+  background: $color-green;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-green;
+    color: $color-white;
+  }
+}
+
+.red-btn {
+  font-family: $font-roboto;
+  color: $color-white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-18;
+  line-height: 2.1rem;
+  padding: 1.5rem 3.5rem;
+  background: $color-red-dark-1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  &--w100 {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  &--italic {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  &--normal {
+    font-weight: normal;
+  }
+
+  &:hover {
+    background: $color-red-dark-1;
+    color: $color-white;
+  }
+}
+
+.yellow-btn {
+  font-family: $font-roboto;
+  color: $color-white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-18;
+  line-height: 2.1rem;
+  padding: 1.5rem 3.5rem;
+  background: $color-yellow-light-1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-yellow-light-1;
+    color: $color-white;
+  }
+}
+
+.btn-gray {
+  background: #2e2e2e;
+  padding: .8rem 1.6rem;
+  color: $color-white;
+  font-size: $font-size-14;
+  margin: 1rem 0px;
+  border-radius: .3rem;
+  font-weight: 600;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  .left-icon-margin {
+    margin-left: 0.2rem;
+  }
+
+  .right-icon-margin {
+    margin-right: 0.2rem;
+  }
+}
+
+.red-outline-btn {
+  background: $color-white;
+  border: 1px solid #EB5757;
+  border-radius: $font-size-30;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-12;
+  line-height: $font-size-14;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #EB5757;
+  padding: 1rem $font-size-20;
+}
+
+.blue-outline-btn {
+  background: $color-white;
+  border: 1px solid $color-primary;
+  border-radius: $font-size-30;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-12;
+  line-height: $font-size-14;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: $color-primary;
+  padding: 1rem $font-size-20;
+}
+
+.yellow-outline-btn {
+  background: $color-white;
+  border: 1px solid #FBDC8C;
+  border-radius: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-12;
+  line-height: $font-size-14;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: $color-black;
+  padding: 1rem 2rem;
+}
+
+.dashed-blue-btn {
+  background: #F3F8FE;
+  border: 1px dashed #88B4E0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.02em;
+  color: #397EB8;
+  padding: 1.2rem 1.5rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #397EB8;
+    background: #F3F8FE;
+  }
+}
+
+.gray-outline-btn {
+  padding: 2rem;
+  background: $color-white;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: $color-black;
+}

@@ -1,0 +1,8 @@
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:997139310010:task-definition/test:1"
+        LoadBalancerInfo: 
+          ContainerName: "first" 
+          ContainerPort: 80

@@ -1,0 +1,129 @@
+.auth-screen {
+
+  .auth-header {
+    border: 0;
+    margin-bottom: $font-size-30;
+
+    @include respond(phone-both) {
+      margin-bottom: 2rem;
+    }
+
+    .auth-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: $font-size-24;
+      line-height: 2.6rem;
+      text-align: left;
+      letter-spacing: -0.02em;
+      color: $color-black;
+      margin: 0;
+    }
+  }
+
+  .auth-content {
+    padding: 0 $font-size-20;
+
+    @include respond(phone-small) {
+      padding: 0;
+    }
+
+    .sub-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: $font-size-18;
+      line-height: 2.1rem;
+      letter-spacing: -0.02em;
+      color: $color-grey-light-1;
+
+      a {
+        color: $color-primary;
+        border-bottom: 1px dashed $color-primary;
+      }
+    }
+
+    .sub-title__two {
+      margin-top: 4rem;
+
+      @include respond(phone-both) {
+        margin-top: 2.5rem;
+      }
+    }
+
+    h5 {
+      color: $color-black;
+      margin: $font-size-20 0 4rem;
+
+      @include respond(phone-both) {
+        margin: $font-size-20 0 2rem;
+        ;
+      }
+    }
+
+    .input-with-icon {
+      margin: 1.4rem 0 5rem;
+      height: 50px;
+
+      &--mb0 {
+        margin-bottom: 0;
+      }
+
+      .input-field {
+        width: 100%;
+      }
+    }
+
+    .resend-otp-text {
+      margin: 2rem auto 5rem;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: #88919A;
+      text-align: center;
+    }
+  }
+
+  .auth-footer {
+    .primary-btn {
+      padding: 1.5rem 5rem;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size-12;
+      line-height: $font-size-14;
+      letter-spacing: -0.02em;
+      color: $color-grey-light-1;
+      margin-top: 1rem;
+    }
+  }
+
+  .my-prefrence {
+    .input-with-icon {
+      margin: $font-size-14 0;
+
+      .residence {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        background: url('../../../images/chevron_down.svg') no-repeat right center;
+      }
+    }
+
+    .form-checkbox {
+      margin-bottom: $font-size-50;
+    }
+  }
+}
+
+.auth-content.row {
+  @include respond(phone-small) {
+    padding: 0 2rem;
+  }
+
+  .auth-body.my-prefrence {
+    width: 100%;
+  }
+}

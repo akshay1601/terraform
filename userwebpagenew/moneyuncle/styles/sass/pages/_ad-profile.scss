@@ -1,0 +1,146 @@
+.ad-profile {
+  .order {
+    padding: 2rem 0;
+  }
+
+  .channel-box {
+    margin-top: 2rem;
+  }
+
+  .ad-aciton-btns {
+    margin-top: 2rem;
+
+    .primary-btn--ad {
+      margin-right: 1rem;
+      color: #ffffff;
+
+      @include respond(phone-both) {
+        width: auto;
+      }
+    }
+
+    .primary-btn--ad,
+    .red-btn--ad {
+      font-weight: normal;
+      padding: 1.5rem 2rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+  .ad-action-area {
+    display: none;
+    margin-top: 20px;
+    textarea {
+      width: 100%;
+      padding: 1rem;
+    }
+    .green-btn {
+      padding: 1.15rem 3.5rem;
+    }
+  }
+
+  .ad-advisor {
+    &-wrapper {
+      margin-bottom: 2rem;
+
+      .idea__wrapper {
+        padding: 2rem 0 2.4rem 0;
+
+        .idea__keypoint {
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    &-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .ad-photo {
+        height: 50px;
+        width: 50px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .ad-posts-stats {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+
+        .ad-stats-item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+
+          @include respond(phone-both) {
+            display: block;
+          }
+
+          .ad-post-no {
+            display: block;
+            font-size: 1.8rem;
+            line-height: 1.6rem;
+            color: $color-black;
+            margin-bottom: 1rem;
+            margin-right: 0.5rem;
+          }
+
+          .ad-post-label {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            color: $color-primary;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &-info {
+      padding: 2.5rem 0 2rem 0;
+      border-bottom: 1px solid #dee1e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .ad-advisor-profile {
+        .ad-advisor-name {
+          font-size: 1.8rem;
+          line-height: 1.6rem;
+          color: $color-black;
+          padding-bottom: 1rem;
+          font-weight: bold;
+        }
+
+        .ad-advisor-position {
+          font-size: 1.6rem;
+          line-height: 1.2rem;
+          color: $color-grey-light-1;
+        }
+      }
+
+      .green-btn {
+        padding: 1rem 1.2rem;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+  .idea__wrapper {
+    .idea__para {
+      font-size: 1.9rem;
+      line-height: 2.8rem;
+    }
+  }
+}

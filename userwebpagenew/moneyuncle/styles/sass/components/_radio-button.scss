@@ -1,0 +1,73 @@
+.radio-container.active {
+  font-weight: 600;
+}
+
+.radio-container {
+  position: relative;
+  padding-left: 4rem;
+  display: block;
+  font-size: 1.6rem;
+  line-height: $font-size-20;
+
+  input.radio {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: auto;
+  }
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  height: 24px;
+  width: 24px;
+  background-color: $color-white;
+  border-radius: 50%;
+  border: 1px solid #949FAA;
+
+  @include respond(phone-small) {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+
+.container:hover input~.checkmark {
+  background-color: $color-white;
+}
+
+.container input:checked~.checkmark {
+  background-color: $color-white;
+  font-weight: 600;
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $color-primary;
+
+  @include respond(phone-small) {
+    width: 8px;
+    height: 8px;
+  }
+}

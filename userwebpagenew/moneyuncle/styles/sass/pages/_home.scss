@@ -1,0 +1,86 @@
+.feeds-section {
+  .advisors-box {
+    padding: $font-size-30 0;
+    margin-bottom: $font-size-18;
+
+    .advisor-info {
+      .advisor-data {
+        h5 {
+          font-size: $font-size-20;
+          line-height: $font-size-24;
+        }
+
+        span {
+          margin-top: 0.9rem;
+          font-size: 1.6rem;
+          line-height: 1.92rem;
+        }
+      }
+    }
+  }
+
+  .channel-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .channel {
+      &__label {
+        font-size: 1.6rem;
+        line-height: 1.92rem;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+      }
+
+      &__picks {
+        margin-top: 1rem;
+        display: flex;
+
+        h6 {
+          font-size: $font-size-20;
+          line-height: $font-size-24;
+          color: $color-blue-dark-1;
+          text-transform: capitalize;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.advertise-box {
+  // margin-top:$font-size-50;
+
+  .advertise {
+
+    background: #F5F5F5;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+}
+
+.empty-container {
+  margin: 6rem 0 5em;
+  text-align: center;
+
+  h4 {
+    margin: 1.5rem 0 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #000000;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #9C9C9C;
+  }
+}

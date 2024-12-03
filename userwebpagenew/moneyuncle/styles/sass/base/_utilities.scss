@@ -1,0 +1,76 @@
+.u-text-red {
+  color: $color-red-dark-1 !important;
+}
+
+.u-text-green {
+  color: $color-green !important;
+}
+
+.u-text-blue {
+  color: $color-primary;
+}
+
+.u-status-close {
+  color: $color-white-light-1;
+  background-color: $color-blue-light-1;
+}
+
+.u-status-wait {
+  color: $color-orange;
+  background-color: $color-yellow-light-2;
+  margin-left: 2.5rem;
+
+  @include respond(phone-both) {
+    margin-left: 1.5rem;
+  }
+
+  @include respond(tab) {
+    margin-left: 1.5rem;
+  }
+}
+
+.u-bg-blue {
+  background: $color-blue-light-2;
+}
+
+.u-bg-red {
+  background: $color-red-dark-1;
+}
+
+.u-bg-green {
+  background: $color-green;
+}
+
+.u-bg-light-green {
+  background: $color-green-light-1;
+}
+
+.u-stats-green {
+  background: $color-green-light-2;
+  border: 1px solid $color-green;
+}
+
+.u-stats-red {
+  background: $color-red-light-2;
+  border: 1px solid $color-red-dark-1;
+}
+
+.u-bg-light-gray {
+  background: $color-grey-light-7;
+}
+
+.u-bg-light-gray-1 {
+  background: $color-grey-light-8;
+}
+
+.u-post-end-border {
+  border-bottom: 1rem solid $color-grey-light-2;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.u-bg-ad-experts {
+  background: $color-grey-light-8;
+}
