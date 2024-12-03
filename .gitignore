@@ -1,5 +1,15 @@
-.terraform*
-.terraform/providers/registry.terraform.io/hashicorp/aws/5.76.0/linux_amd64/terraform-provider-aws_v5.76.0_x5
-**/.terraform/*
-.terraformmrc
-.terraform
+# Local .terraform directories
+ **/.terraform/*
+
+#  Ignore variables files
+ *.auto.tfvars
+
+#  Ignore override files
+ *.tfoverride
+
+#  Ignore environment-specific files
+ .envrc
+
+#  Ignore CLI configuration files
+ .terraformrc
+ terraform.rc
