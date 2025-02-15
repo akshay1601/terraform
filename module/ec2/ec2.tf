@@ -13,6 +13,11 @@ resource "aws_instance" "ec2_instance" {
             sudo source /etc/environment
             sudo echo "PasswordAuthentication yes" > /etc/ssh/sshd_config.d/60-cloudimg-settings.conf
     EOF
+    
+    root_block_device {
+      volume_size = var.volume_size
+      volume_type = var.volume_type
+    }
 
     tags = {
         Name =  var.instance_name[count.index]

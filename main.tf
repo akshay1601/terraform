@@ -5,6 +5,9 @@ module "ec2" {
     key_name = var.key_name
     instance_count  = var.instance_count
     instance_name = var.instance_name
+    volume_size = var.volume_size
+    volume_type = var.volume_type
+   
     }
 
 module "sg" {
