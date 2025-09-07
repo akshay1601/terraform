@@ -1,0 +1,18 @@
+.navbar-expand-lg {
+
+  .navbar-collapse {
+    justify-content: flex-end;
+
+    @include respond(phone-both) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include respond(tab) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex-basis: auto;
+    }
+  }
+}

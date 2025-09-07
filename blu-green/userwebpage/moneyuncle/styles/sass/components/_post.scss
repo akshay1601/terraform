@@ -1,0 +1,83 @@
+.post {
+  &__title {
+    color: $color-black;
+    font-size: $font-size-30;
+    line-height: 4.2rem;
+    padding: 2.2rem 0 1rem 0;
+
+    @include respond(phone-both) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      padding: 1.5rem 0 1rem 0;
+    }
+
+    @include respond(tab) {
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+      padding: 1.5rem 0 1rem 0;
+    }
+  }
+
+  &__tag {
+    color: $color-red-dark-2;
+    font-size: $font-size-20;
+    line-height: $font-size-24;
+  }
+
+  &__time h6 {
+    color: $color-grey-light-1;
+    font-size: $default-font-size;
+    line-height: 1.9rem;
+    padding: 1rem 0 $font-size-30 0;
+  }
+
+  &__details {
+    color: $color-black;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    padding: 3.8rem 0 $font-size-20 0;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__read-more,
+  &__read-more:hover,
+  &__read-more:focus {
+    color: $color-primary;
+    font-size: $font-size-20;
+    line-height: $font-size-24;
+    font-weight: bold;
+  }
+}
+
+.post--small {
+  width: 99.7%;
+  padding: 1.6rem;
+  border: 1px solid $color-grey-light-3;
+  border-radius: 4px;
+
+  .post__title {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: bold;
+  }
+
+  .post__tag {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+  }
+
+  .post__time {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    h6 {
+      padding-bottom: 0;
+    }
+  }
+}

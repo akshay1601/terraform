@@ -1,0 +1,152 @@
+.vertical-tabs {
+
+  @include respond(phone-both) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    box-shadow: 5px 4px 7px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .tabs {
+    @include respond(phone-both) {
+      flex-direction: row !important;
+      justify-content: space-between;
+    }
+
+    .nav-link {
+      padding: 0;
+
+      @include respond(tab) {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__item {
+      padding: 2rem;
+      box-shadow: 0px 1px 0px rgba(180, 180, 180, 0.25);
+
+
+      @include respond(phone-both) {
+        width: 20%;
+        box-shadow: none;
+        padding: 1rem 0.5rem;
+      }
+
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+
+        @include respond(phone-both) {
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
+    &__link {
+      font-size: $font-size-24;
+      line-height: 2.8rem;
+      color: $color-black;
+      transition: .2s all;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include respond(tab) {
+
+
+        .tabs__span {
+          display: block;
+        }
+      }
+
+      @include respond(tab-land) {
+        text-align: center;
+
+        .tabs__span {
+          display: block;
+        }
+      }
+
+      @include respond(phone-both) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      @include respond(tab) {
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+
+      .active-image {
+        display: none;
+      }
+
+      .deactive-image {
+        display: block;
+      }
+
+      img {
+        @include respond(phone-both) {
+          margin: 0 auto;
+          width: 20px;
+        }
+
+        @include respond(tab) {
+          margin: 0 auto;
+          width: 20px;
+          display: block;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        color: $color-primary;
+
+        .tabs__span {
+          .active-image {
+            display: block;
+          }
+
+          .deactive-image {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__label {
+      padding-left: $font-size-20;
+
+      @include respond(phone-both) {
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        min-height: 10px;
+        margin-top: 10px;
+      }
+
+      @include respond(tab) {
+        padding-left: 1rem;
+        margin-top: 0;
+        text-align: left;
+      }
+
+      @include respond(phone-land) {
+        min-height: 1px;
+      }
+    }
+  }
+}

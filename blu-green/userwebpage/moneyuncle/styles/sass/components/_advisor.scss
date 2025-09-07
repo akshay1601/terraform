@@ -1,0 +1,179 @@
+.top-advisors {
+  background: $color-white;
+  border: 2px solid $color-grey-light-6;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  margin: $font-size-20 0;
+
+  .title {
+    font-family: $font-GothamBook-rounded;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size-24;
+    line-height: 2.9rem;
+    letter-spacing: -0.02em;
+    color: $color-black;
+    padding: $font-size-20;
+  }
+
+  .find-advisor {
+    padding: $font-size-30 $font-size-20;
+    text-align: center;
+
+    .primary-btn {
+      width: 100%;
+
+      @include respond(tab) {
+        padding: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
+
+.advisors-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $color-grey-light-6;
+  padding: $font-size-30 $font-size-20;
+
+  h6 {
+    font-family: $font-GothamBook-rounded;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $font-size-14;
+    line-height: 1.7rem;
+    letter-spacing: -0.02em;
+    color: $color-grey-dark-1;
+    margin-top: 1rem;
+  }
+
+  .advisor-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .advisor-photo {
+      margin-right: 1rem;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .advisor-data {
+
+      h5 {
+        font-family: $font-GothamBook-rounded;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: -0.02em;
+        color: $color-black;
+      }
+
+      span {
+        font-family: $font-GothamBook-rounded;
+        font-style: normal;
+        font-weight: normal;
+        font-size: $font-size-14;
+        line-height: 1.7rem;
+        letter-spacing: -0.02em;
+        color: $color-grey-light-1;
+        margin-top: 0.5rem;
+        display: block;
+      }
+    }
+
+
+  }
+
+  .upvotes-box {
+    background: $color-white;
+    border: 1px solid $color-black;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 7rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab) {
+      margin: 0 auto;
+      padding: 1rem;
+      height: auto;
+      width: auto;
+    }
+
+    h6 {
+      font-family: $font-GothamBook-rounded;
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font-size-12;
+      line-height: 1.7rem;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: $color-primary;
+      margin-top: .7rem;
+
+      span {
+        color: #000;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .green-btn {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    padding: 1rem 4.3rem;
+  }
+}
+
+.top-advisors {
+  .advisors-box {
+    @include respond(tab) {
+      display: block;
+      padding: 2rem;
+    }
+
+    h6 {
+
+      @include respond(tab) {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .advisor-info {
+
+      @include respond(tab) {
+        display: block;
+        text-align: center;
+      }
+
+      .advisor-data {
+        @include respond(tab) {
+          text-align: center;
+          margin: .5rem 0 1rem 0;
+        }
+      }
+    }
+
+    .upvotes-box {
+
+      @include respond(tab) {
+        margin: 0 auto;
+        padding: 1rem;
+        height: auto;
+        width: auto;
+      }
+
+    }
+  }
+}

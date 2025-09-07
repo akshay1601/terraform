@@ -1,0 +1,123 @@
+.idea-filter {
+  background: #F4F9FF;
+  border: 1px solid #29A0E2;
+  border-radius: 4px;
+
+  .filter-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: #000000;
+    padding: 2rem;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      content: "";
+      background: url('../../../images/icons/caret_up.svg') no-repeat center center;
+      height: 20px;
+      width: 12px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    p {
+      display: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: #647A8D;
+      margin-top: 1rem;
+    }
+  }
+
+  .filter-title.collapsed {
+    &:after {
+      content: "";
+      background: url('../../../images/icons/caret_down.svg') no-repeat center center;
+      height: 20px;
+      width: 12px;
+      position: absolute;
+      right: 20px;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  .filter-box {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 2rem;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+
+    h5 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: #397EB8;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+      padding: 10px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      text-align: center;
+      color: #4D4E59;
+      margin-right: 1rem;
+      margin-bottom: 1.5rem;
+      transition: 0.2s all;
+
+      &:hover,
+      &:focus {
+        background: #397EB8;
+        color: #FFFFFF;
+        transition: 0.2s all;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .filter-btn.active {
+      background: #397EB8;
+      color: #FFFFFF;
+    }
+  }
+
+  .filter-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DBE3ED;
+    padding: 2rem 0;
+
+    .actions-btn {
+      width: 50%;
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: #000000;
+    }
+
+    a.actions-btn.u-text-blue {
+      color: #397EB8;
+    }
+  }
+}

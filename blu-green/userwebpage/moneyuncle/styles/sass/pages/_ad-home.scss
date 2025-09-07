@@ -1,0 +1,311 @@
+.feeds-section {
+  .advisors-box {
+    padding: $font-size-30 0;
+    margin-bottom: $font-size-18;
+
+    .advisor-info {
+      .advisor-data {
+        h5 {
+          font-size: $font-size-20;
+          line-height: $font-size-24;
+        }
+
+        span {
+          margin-top: 0.9rem;
+          font-size: 1.6rem;
+          line-height: 1.92rem;
+        }
+      }
+    }
+  }
+
+  .channel-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .channel {
+      &__label {
+        font-size: 1.6rem;
+        line-height: 1.92rem;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+      }
+
+      &__picks {
+        margin-top: 1rem;
+        display: flex;
+
+        h6 {
+          font-size: $font-size-20;
+          line-height: $font-size-24;
+          color: $color-blue-dark-1;
+          text-transform: capitalize;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.advertise-box {
+  .advertise {
+
+    background: #F5F5F5;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  @include respond(phone-both) {
+    margin-top: 4rem;
+  }
+}
+
+.empty-container {
+  margin: 6rem 0 5em;
+  text-align: center;
+
+  h4 {
+    margin: 1.5rem 0 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #000000;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #9C9C9C;
+  }
+}
+
+.ad-home {
+  .carousel-box {
+    width: 91%;
+    margin: 0 auto 5rem;
+
+    @include respond(phone-both) {
+      width: 100%;
+    }
+
+    .ad-stats-wrapper {
+      background: $color-white;
+    }
+
+    .slick-next {
+      @include respond(phone-both) {
+        bottom: -36px;
+        top: auto;
+        right: 50%;
+        margin-right: -50px;
+      }
+    }
+
+    .slick-prev {
+      @include respond(phone-both) {
+        bottom: -36px;
+        top: auto;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+  }
+
+  .ad-profit-box {
+    text-align: center;
+    margin: 3rem 0;
+
+    .ad-amount {
+      font-size: 4rem;
+      line-height: 4.5rem;
+      color: $color-black;
+      margin-bottom: 1.5rem;
+    }
+
+    .ad-dates {
+      background: #DFE6ED;
+      border-radius: 30px;
+      padding: 1.6rem 3.2rem;
+      font-size: 1.6rem;
+      line-height: 1.4rem;
+      color: $color-black;
+    }
+  }
+
+  .plan-box {
+    border: 1px solid #DFE6ED;
+  }
+
+  .ad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .section-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .orders-billings {
+    .select-box-container {
+      width: 25%;
+      margin-bottom: 0;
+
+      @include respond(phone-both) {
+        width: 38%;
+      }
+    }
+  }
+
+  .ad-stats-wrapper {
+    border: 1px solid #DFE6ED;
+    border-radius: 4px;
+    margin-bottom: 3rem;
+
+    .ad-stats-entries {
+      .ad-stats-body:not(:last-child) {
+        border-bottom: 1px solid #F4F7FA;
+      }
+    }
+
+    .ad-stats-header,
+    .ad-stats-body {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .ad-stats-header {
+      padding: 2rem;
+
+      .ad-stats-label {
+        &:not(:first-child) {
+          width: 20%;
+
+          @include respond(phone-both) {
+            width: 22%;
+          }
+
+          h6 {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            background: #F6F6F6;
+            padding: 1.5rem 2rem;
+            color: $color-grey-light-1;
+          }
+        }
+
+        &:first-child {
+          width: 40%;
+
+          @include respond(phone-both) {
+            width: 34%;
+          }
+
+          h4 {
+            font-size: 2rem;
+            line-height: 2.6rem;
+            color: $color-black;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .ad-stats-body {
+      padding: 1.5rem 2rem;
+
+      .ad-stats-value {
+        position: relative;
+
+        span {
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+          color: $color-black;
+
+          @include respond(phone-both) {
+            font-size: 1.5rem;
+          }
+        }
+
+        img {
+          vertical-align: baseline;
+          display: inline-block;
+        }
+
+        &:not(:first-child) {
+          width: 20%;
+
+          @include respond(phone-both) {
+            width: 22%;
+            text-align: center;
+          }
+
+          span {
+            padding-left: 2rem;
+
+            @include respond(phone-both) {
+              padding-left: 1rem;
+            }
+          }
+        }
+
+        &:first-child {
+          width: 40%;
+
+          @include respond(phone-both) {
+            width: 34%;
+          }
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .tooltiptext {
+          width: 162px;
+          margin-left: -108px;
+
+          ul {
+            li {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              &:not(:last-child) {
+                margin-bottom: 0.5rem;
+              }
+
+              span {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                padding-left: 0;
+              }
+
+              .label {
+                font-style: normal;
+                font-weight: normal;
+                color: #88919A;
+              }
+
+              .value {
+                font-style: normal;
+                font-weight: bold;
+                color: $color-black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

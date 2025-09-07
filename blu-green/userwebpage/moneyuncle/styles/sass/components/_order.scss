@@ -1,0 +1,177 @@
+.order {
+  padding: 3rem 0;
+  border-bottom: 2px solid $color-grey-light-6;
+  text-transform: capitalize;
+
+  &__wrapper {
+    border: 2px solid $color-grey-light-3;
+    border-radius: 4px;
+
+    &--b0 {
+      border: 0;
+
+      .order__label {
+        margin: 0;
+        margin-right: 2rem;
+      }
+
+      .order__status {
+        margin-top: 0;
+      }
+
+      .order__profit {
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: $color-grey-light-1;
+    margin: 3rem 2.5rem 0 2rem;
+
+    @include respond(phone-both) {
+      margin: 0rem 1rem 1rem 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab) {
+      margin: 3rem .5rem 0 1.5rem;
+    }
+  }
+
+  &__status {
+    font-size: 1.6rem;
+    line-height: 1.92rem;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 2.5rem;
+
+    @include respond(phone-both) {
+      margin-top: 1.5rem;
+      ;
+    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    padding-right: 2rem;
+
+    &--center {
+      margin-top: 0;
+      padding-right: 0;
+    }
+
+    .red-btn {
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      padding: 1rem 1.2rem;
+
+      @include respond(phone-both) {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        padding: 0.8rem 1.1rem;
+      }
+    }
+  }
+
+  &__profit {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin: 0 0 2rem 2.5rem;
+    font-weight: bold;
+
+    @include respond(phone) {
+      margin-left: 1.5rem;
+    }
+
+    @include respond(tab) {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__body {
+    padding: 2rem 3.6rem;
+    border-top: 1px solid $color-grey-light-6;
+
+    @include respond(phone) {
+      padding: 2rem 1.5rem;
+    }
+
+    @include respond(tab) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  &-entry {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include respond(phone-both) {
+      display: block;
+    }
+
+    &__value {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &--w30 {
+      width: 30%;
+    }
+
+    &--w70 {
+      width: 70%;
+    }
+
+    &__index {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      color: $color-black;
+      font-weight: bold;
+    }
+
+    &__info {
+      display: flex;
+
+      li {
+        background-color: $color-grey-light-5;
+        padding: 5px 10px;
+        border-radius: 4px;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 1.4rem;
+          line-height: 1.96rem;
+          color: $color-grey-light-1;
+          text-transform: uppercase;
+
+          @include respond(phone-both) {
+            font-size: 1.2rem;
+            line-height: 1.66rem;
+          }
+        }
+      }
+    }
+
+    &__label {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: $color-grey-light-1;
+      padding: 2rem 0 .5rem 0;
+    }
+  }
+}

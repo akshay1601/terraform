@@ -1,0 +1,130 @@
+footer {
+  .footer-area1 {
+    position: relative;
+    background-color: $color-black-1;
+    padding: 1.5rem 0;
+
+    .footer-widget {
+      width: 100%;
+
+      .col1 {
+        margin-top: 4rem;
+
+        .footer-logo {
+          margin-bottom: 4rem;
+
+          @include respond(phone-both) {
+            margin-bottom: 1rem;
+          }
+
+          a {
+            color: $color-blue-dark-1;
+            font-size: $font-size-20;
+            font-weight: bolder;
+            text-transform: uppercase;
+
+            span {
+              color: $color-white;
+              display: inline-block;
+            }
+          }
+
+        }
+
+        .info {
+          p {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.3rem;
+            color: $color-grey-light-1;
+            margin: 0px;
+          }
+        }
+
+        .enquiry {
+          margin-top: $font-size-20;
+
+          p {
+            font-size: $font-size-14;
+            color: $color-grey-light-4;
+          }
+        }
+
+        .footer-nav {
+          margin-bottom: 1rem;
+
+          ul {
+            li {
+              margin-bottom: 0.5rem;
+
+
+              a {
+                color: $color-grey-light-1;
+                font-size: 1.5rem;
+                -webkit-transition: all 0.4s ease-out 0s;
+                -moz-transition: all 0.4s ease-out 0s;
+                -ms-transition: all 0.4s ease-out 0s;
+                -o-transition: all 0.4s ease-out 0s;
+                transition: all 0.4s ease-out 0s;
+
+                &:hover {
+                  color: $color-primary;
+                }
+              }
+
+              .btn-gray {
+                color: $color-white;
+
+                &:hover {
+                  color: $color-white;
+                }
+              }
+
+              p {
+                color: $color-grey-light-1;
+                margin-top: 1.5rem;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .footer-area2 {
+    position: relative;
+    background: $color-black;
+    padding: 1.5rem 0;
+
+    @include respond(phone-both) {
+      padding: 1.5rem 0 12rem;
+    }
+
+    .footer-widget {
+      width: 100%;
+
+
+      p {
+        font-size: $font-size-14;
+        color: $color-grey-light-1;
+
+      }
+
+      .rights-reserved {
+        text-align: right;
+
+        @include respond(phone-both) {
+          text-align: left;
+          margin-top: 2rem;
+        }
+
+        p {
+          text-transform: uppercase;
+        }
+      }
+
+    }
+
+  }
+}

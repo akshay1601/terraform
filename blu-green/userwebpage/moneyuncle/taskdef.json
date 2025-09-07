@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::738333021806:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "first",
+            "image": "738333021806.dkr.ecr.us-east-1.amazonaws.com/moneyuncle",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "2048",
+    "memory": "4096",
+    "family": "test"
+}

@@ -1,0 +1,247 @@
+.my-prefrence {
+  .input-with-icon {
+    .fa-search {
+      margin-right: 1rem;
+    }
+
+    .fa-times-circle {
+      margin-left: 1rem;
+    }
+  }
+
+  .preference-box {
+    background: #F4F7FB;
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: $font-size-20;
+  }
+
+  .trade-preference-container {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+
+    @include respond(phone-both) {
+      margin-top: 2rem;
+    }
+
+    h6 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: #397EB8;
+      margin-bottom: 1rem;
+    }
+
+    .sort-tabs {
+      .sort-tabs__items {
+        border-bottom: 1px solid $color-grey-light-6;
+
+        .sort-tabs__link {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.5rem;
+          line-height: $font-size-18;
+          letter-spacing: -0.02em;
+          color: $color-grey-light-1;
+          padding: 1rem $font-size-20;
+
+          @include respond(tab) {
+            padding: 1rem 1.5rem;
+          }
+        }
+
+        .sort-tabs__link.active {
+          font-weight: bold;
+          color: $color-primary;
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+    }
+
+    .trade-preference-box {
+      background: $color-white;
+      border-bottom: 1px solid $color-grey-light-6;
+      box-sizing: border-box;
+      border-radius: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.3rem 2.2rem;
+
+      &--full-border {
+        border: 1px solid $color-grey-light-6;
+      }
+
+      span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        letter-spacing: -0.02em;
+        color: $color-grey-light-1;
+        margin-top: 6px;
+      }
+
+      .trade-item {
+        img {
+          margin-right: 1rem;
+          width: 15px;
+        }
+
+        h5 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+          margin: 0;
+          text-transform: uppercase;
+
+          span {
+            background: #F4F7FA;
+            padding: 8px 5px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #88919A;
+            margin: 0 0 0 1rem;
+            display: inline-block;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .trade-status {
+        h5 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          text-align: right;
+          letter-spacing: -0.02em;
+          color: $color-red-dark-1;
+          margin: 0;
+        }
+
+        .edit-trade {
+          padding: 1rem $font-size-20;
+        }
+      }
+    }
+
+    .add-trade {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      a {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        text-align: right;
+        letter-spacing: -0.02em;
+        color: $color-primary;
+        border-bottom: 1px dashed $color-primary;
+      }
+    }
+  }
+}
+
+.preference-modal {
+  .modal-content {
+    border-radius: 20px;
+    border: 0;
+
+    .modal-header {
+      border: 0;
+
+      .close {
+        span {
+          color: #000;
+        }
+      }
+    }
+
+    .modal-body {
+      .modal-title-box {
+        h4 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 2.1rem;
+          text-align: center;
+          color: #000000;
+        }
+
+        h5 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          text-align: center;
+          color: #333333;
+          margin: 1rem 0 1.5rem;
+        }
+
+        h6 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+          text-align: center;
+          color: #000000;
+          margin: 1rem 0 2rem;
+        }
+
+        img {
+          margin-bottom: 1.5rem;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+          text-align: center;
+          color: #88919A;
+        }
+
+        button {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+.my-prefrence.search-results {
+  .trade-preference-container {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.search-results {
+  width: 100%;
+  position: absolute;
+  top: 110%;
+  z-index: 9;
+  left: 0;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}

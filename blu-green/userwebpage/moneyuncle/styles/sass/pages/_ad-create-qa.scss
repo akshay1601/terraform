@@ -1,0 +1,257 @@
+.ad-create-question-and-answer {
+
+  .profile-form-box {
+    margin-top: 4rem;
+
+    .form-box-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .col-49 {
+        width: 49%;
+      }
+
+      .label-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          color: #88919A;
+        }
+      }
+    }
+
+    .form-box {
+      textarea {
+        background: $color-white;
+        box-shadow: 0px 1px 0px #d9e3ee;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: #000;
+        width: 100%;
+        padding: 14px 20px;
+        border: 0;
+        position: relative;
+        resize: none;
+        height: 150px;
+      }
+
+      .dashed-blue-btn {
+        display: block;
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .form-box-col-3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        span {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+          color: #000000;
+          margin-right: 1rem;
+          min-width: 60px;
+        }
+
+        input {
+          &:not(first-child) {
+            margin: 0 1rem 0 0rem;
+          }
+        }
+      }
+
+      .instrument {
+        flex-wrap: wrap;
+
+        .instrument-box {
+          width: auto;
+          margin-bottom: 1rem;
+          padding: 1rem 1.5rem;
+          background: $color-white;
+          box-shadow: 0px 1px 0px #D9E3EE;
+          border-radius: 10px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 2.6rem;
+          text-align: center;
+          color: #4D4E59;
+          margin-right: 1rem;
+        }
+
+        .instrument-box.active {
+          background: #397EB8;
+          color: #FFFFFF;
+        }
+
+        .instrument-box.deactive {
+          background: #ECECEC;
+          color: rgba(77, 78, 89, 0.3);
+        }
+      }
+
+      .question-box {
+        height: auto;
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          box-shadow: none;
+          border-radius: 0px;
+          border: 0;
+          resize: none;
+          padding: 0;
+        }
+
+        .red-btn {
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          padding: 1rem 2rem;
+
+          svg {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .preference-box {
+        background: $color-white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        label {
+          margin-bottom: 0;
+          line-height: 2.3rem;
+        }
+
+        .radio-container,
+        .checkbox-container {
+          color: $color-black;
+        }
+      }
+
+      .select-box-container {
+        margin-top: 0.5rem;
+
+        .select-box {
+          color: #88919A;
+          border: 0;
+        }
+      }
+
+      .radio-container.s-access {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #FF7269;
+      }
+    }
+
+    .list-style {
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      .circle {
+        width: 8px;
+        height: 8px;
+        background: $color-black;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 15px;
+        border-radius: 50%;
+        margin-top: -4px;
+      }
+
+      input {
+        position: relative;
+        padding-left: 50px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: #000000;
+
+        @include respond(phone-both) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  .green-btn {
+    display: block;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone-both) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .my-prefrence {
+    .trade-preference-container {
+      .buy-preference {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        padding: 2.5rem;
+
+        .trade-status {
+          h5 {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.approx-margin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 16px;
+  width: 100%;
+  background: #EBEBEB;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4rem;
+
+  a {
+    margin-left: 0.5rem;
+    color: #000000;
+  }
+
+  span,
+  a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+  }
+}

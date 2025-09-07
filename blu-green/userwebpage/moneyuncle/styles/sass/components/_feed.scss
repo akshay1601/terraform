@@ -1,0 +1,258 @@
+.feed {
+ margin-bottom: 3rem;
+
+ &__label {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: $color-black;
+ }
+
+ &-tabs {
+  margin: 2rem 0 5rem 0;
+
+  .nav {
+   @include respond(phone-both) {
+    justify-content: space-between;
+   }
+
+   @include respond(tab) {
+    justify-content: space-between;
+   }
+  }
+
+  &__item {
+   min-width: 11rem;
+
+   @include respond(phone-both) {
+    min-width: 6rem;
+   }
+
+   @include respond(tab) {
+    min-width: 6rem;
+   }
+
+   &:not(:last-child) {
+    margin-right: 1.9rem;
+
+    @include respond(phone-both) {
+     margin-right: .9rem;
+    }
+
+    @include respond(tab) {
+     margin-right: .5rem;
+    }
+   }
+  }
+
+  .nav-link {
+   padding: 1.2rem 1rem 1rem 1rem;
+
+   @include respond(phone-both) {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+   }
+
+   @include respond(tab) {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+   }
+
+  }
+
+  &__link {
+   color: $color-black;
+   background-color: $color-white;
+   border: 1px solid #E0E0E0;
+   border-radius: 4px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   transition: .2s all;
+
+   @include respond(phone-both) {
+    border: 0;
+   }
+
+   @include respond(tab) {
+    border: 0;
+   }
+
+   .active-image {
+    display: none;
+   }
+
+   .deactive-image {
+    display: show;
+   }
+
+   span {
+    @include respond(phone-both) {
+     font-size: 1.2rem;
+     font-weight: bold;
+    }
+
+    @include respond(tab) {
+     font-size: 1.5rem;
+     margin-top: .5rem;
+     font-weight: normal;
+    }
+   }
+
+   &:hover,
+   &:focus,
+   &:active,
+   &.active {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    @include respond(phone-both) {
+     background-color: transparent;
+     border-color: transparent;
+    }
+
+    @include respond(tab) {
+     background-color: transparent;
+     border-color: transparent;
+    }
+
+    .tabs__span {
+     @include respond(phone-both) {
+      color: $color-white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+     }
+
+     @include respond(tab) {
+      color: $color-white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+     }
+
+     .active-image {
+      display: block;
+     }
+
+     .deactive-image {
+      display: none;
+     }
+    }
+
+    span {
+
+     @include respond(phone-both) {
+      color: $color-primary;
+     }
+
+     @include respond(tab) {
+      color: $color-primary;
+     }
+    }
+   }
+
+   .tabs__span {
+    margin-bottom: 0.5rem;
+
+    @include respond(phone-both) {
+     background-color: $color-white;
+     border: 1px solid #E0E0E0;
+     border-radius: 50%;
+     height: 40px;
+     width: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     img {
+      width: 40%;
+     }
+    }
+
+    @include respond(tab) {
+     background-color: $color-white;
+     border: 1px solid #E0E0E0;
+     border-radius: 50%;
+     height: 35px;
+     width: 35px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     img {
+      width: 40%;
+     }
+    }
+   }
+  }
+ }
+
+ .sort-tabs {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid $color-grey-light-6;
+
+  &__label {
+   color: $color-black;
+   font-size: 1.6rem;
+   line-height: 1.92rem;
+   padding-right: 1rem;
+
+   @include respond(phone-both) {
+    display: none;
+   }
+
+   @include respond(tab) {
+    display: none;
+   }
+  }
+
+  &__item {
+   &:not(:last-child) {
+    margin-right: 1rem;
+
+    @include respond(phone-both) {
+     margin-right: 0;
+    }
+   }
+  }
+
+  .nav-link {
+   padding: 0 1rem 1.4rem 1rem;
+
+   @include respond(phone-both) {
+    padding: 0 0.8rem 0.8rem;
+   }
+
+   @include respond(tab) {
+    padding: 0 .6rem 1.2rem .6rem;
+   }
+  }
+
+  &__link {
+   font-size: 1.8rem;
+   line-height: 2.16rem;
+   color: $color-grey-light-1;
+   border-bottom: 3px solid transparent;
+   transition: all .2s;
+
+   @include respond(tab) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+   }
+
+
+   &:hover,
+   &:focus,
+   &:active,
+   &.active {
+    color: $color-primary;
+    border-bottom: 3px solid $color-primary;
+   }
+  }
+ }
+}
+
+.feed__wrapper {
+ border-bottom: 1rem solid $color-grey-light-2;
+}

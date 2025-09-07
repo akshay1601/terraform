@@ -1,0 +1,150 @@
+.ad-create-post-position {
+  .item-w-90 {
+    width: 90% !important;
+  }
+
+  .item-w-10 {
+    width: 10% !important;
+
+    @include respond(phone-both) {
+      width: 15% !important;
+    }
+  }
+
+  .ad-order {
+    .ideaDetail .order-entry {
+      padding: 0;
+    }
+  }
+
+  .order__header {
+    background: $color-white;
+    box-shadow: 0px 1px 0px #D9E3EE;
+    padding-right: 2rem;
+  }
+
+  .order__position {
+    background: $color-white;
+    box-shadow: 0px 1px 0px #D9E3EE;
+    margin-bottom: 2rem;
+  }
+
+  .margin-box {
+    background: $color-white;
+    box-shadow: 0px 1px 0px #D9E3EE;
+  }
+
+  .ideaDetail {
+    .order-entry {
+      padding: 1.5rem 2rem;
+    }
+
+    .position-details,
+    .position-stats {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .ad-position-info {
+      padding: 1.5rem 2rem;
+      border-top: 1px solid #F2F2F2;
+      border-bottom: 1px solid #F2F2F2;
+
+      span {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+
+      .ad-position-label {
+        color: $color-grey-light-1;
+        margin-right: 0.5rem;
+      }
+
+      .ad-position-value--black {
+        color: $color-black;
+      }
+
+      .ad-position-value {
+        margin-right: 2rem;
+      }
+
+      .ad-position-para {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        color: $color-black;
+        padding-top: .5rem;
+      }
+    }
+
+    .ad-position-btns {
+      padding: 1.5rem 2rem;
+
+      .btn--ad {
+        font-weight: normal;
+
+        &:not(last-child) {
+          margin-right: 1rem;
+        }
+
+        @include respond(phone-both) {
+          width: auto;
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.my-prefrence {
+  .trade-preference-container {
+    h6 {
+      margin-bottom: 0;
+    }
+
+    .order-entry__index {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .ideaDetail {
+      .order__positions {
+        color: #000000;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-body {
+    .my-prefrence .trade-preference-container .trade-preference-box {
+      border-bottom: 0;
+    }
+
+    .my-prefrence .trade-preference-container {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    .trade-btns {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 1rem 0 2rem 0;
+
+      .trade-btn {
+        width: 40%;
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+    }
+  }
+}
