@@ -7,11 +7,16 @@ module "ec2" {
     instance_name = var.instance_name
     volume_size = var.volume_size
     volume_type = var.volume_type
-   
+
     }
 
 module "sg" {
   source = "./module/sg"
+  vpc_id = module.vpc.vpc_id
+}
+
+module "vpc" {
+    source = "./module/vpc"
 }
 
 module "ecs" {
@@ -29,11 +34,11 @@ module "ecs" {
     hostPort = var.hostPort
     aws_ecs_service_name = var.aws_ecs_service_name
     desired_count = var.desired_count
-
+    service_sg = [module.sg.service_sg]
+    subnet_id = [module.vpc.subnet_id]
 }
 
 module "iam-role" {
     source = "./module/iam-role"
     tasks-service-role = var.tasks-service-role
-
 }
