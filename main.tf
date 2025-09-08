@@ -24,7 +24,7 @@ module "ecs" {
   container_definitions_cpu = var.container_definitions_cpu
   container_definitions_memory = var.container_definitions_memory
   container_image = 
-  execution_role_arn = module.iam-role.tasks-service-role.name
+  execution_role_arn = module.iam-role.tasks-service-role-arn
   containerPort = var.containerPort
   hostPort = var.hostPort
   aws_ecs_service_name = var.aws_ecs_service_name

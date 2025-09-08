@@ -36,8 +36,8 @@ runtime_platform {
 #Creating ecs service
 resource "aws_ecs_service" "ecs_service" {
   name            = var.aws_ecs_service_name
-  cluster         = aws_ecs_cluster.example.id
-  task_definition = aws_ecs_task_definition.test.arn
+  cluster         = aws_ecs_cluster.ecs_cluster.id
+  task_definition = aws_ecs_task_definition.ecs_task_definition.arn
   desired_count   = var.desired_count
   launch_type     = "FARGATE"
   
