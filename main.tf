@@ -14,3 +14,25 @@ module "sg" {
   source = "./module/sg"
 }
 
+module "ecs" {
+  source = "./module/ecs"
+  aws_ecs_cluster_name = var.aws_ecs_cluster_name
+  task_definition_family_name = var.task_definition_family_name
+  task_definition_cpu = var.task_definition_cpu
+  task_definition_memory = var.task_definition_memory
+  container_definitions_name = var.container_definitions_name
+  container_definitions_cpu = var.container_definitions_cpu
+  container_definitions_memory = var.container_definitions_memory
+  container_image = 
+  execution_role_arn = module.iam-role.tasks-service-role.arn
+  containerPort = var.containerPort
+  hostPort = var.hostPort
+  aws_ecs_service_name = var.aws_ecs_service_name
+  desired_count = var.desired_count
+
+}
+
+module "iam-role" {
+source = "./module/iam-role"
+tasks-service-role = var.tasks-service-role
+}
