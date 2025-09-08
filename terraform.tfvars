@@ -19,3 +19,5 @@ volume_type = "gp2"
   hostPort = 80
   aws_ecs_service_name = "my-ecs-service"
   desired_count = 2
+
+  tasks-service-role = "moneyuncleecsrole"
