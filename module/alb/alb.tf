@@ -2,7 +2,7 @@ resource "aws_lb" "service_alb" {
   name               = "service-lb-tf"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [aws_security_group.alb-sg.id]
+  security_groups    = var.alb_sg
   subnets            = var.public_subnet_id
 
 

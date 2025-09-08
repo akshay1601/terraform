@@ -37,7 +37,7 @@ module "ecs" {
     desired_count = var.desired_count
     service_sg = [module.sg.service_sg]
     subnet_id = [module.vpc.subnet_id]
-
+    target_group_arn = module.alb.target_group_arn
 }
 
 module "iam-role" {
@@ -49,4 +49,6 @@ module "alb" {
   source = "./module/alb"
   public_subnet_id = module.vpc.public_subnet_id
   vpc_id = module.vpc.vpc_id
+  alb_sg = [module.sg.alb_sg]
+
 }

@@ -20,3 +20,4 @@ variable "aws_ecs_service_name" {}
 variable "desired_count" {}
 variable "service_sg" {}
 variable "subnet_id" {}
+variable "target_group_arn" {}
