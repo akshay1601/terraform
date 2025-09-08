@@ -23,7 +23,7 @@ module "ecs" {
   container_definitions_name = var.container_definitions_name
   container_definitions_cpu = var.container_definitions_cpu
   container_definitions_memory = var.container_definitions_memory
-  container_image = 
+  container_image = "akshayv1601/java_project"
   execution_role_arn = module.iam-role.tasks-service-role-arn
   containerPort = var.containerPort
   hostPort = var.hostPort
