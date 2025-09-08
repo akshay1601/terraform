@@ -13,6 +13,7 @@ module "ec2" {
 module "sg" {
   source = "./module/sg"
   vpc_id = module.vpc.vpc_id
+
 }
 
 module "vpc" {
@@ -42,4 +43,10 @@ module "ecs" {
 module "iam-role" {
     source = "./module/iam-role"
     tasks-service-role = var.tasks-service-role
+}
+
+module "alb" {
+  source = "./module/alb"
+  public_subnet_id = module.vpc.public_subnet_id
+  vpc_id = module.vpc.vpc_id
 }
