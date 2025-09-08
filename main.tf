@@ -35,7 +35,7 @@ module "ecs" {
     aws_ecs_service_name = var.aws_ecs_service_name
     desired_count = var.desired_count
     service_sg = [module.sg.service_sg]
-    subnet_id = module.vpc.subnet_id[count.index]
+    subnet_id = module.vpc.subnet_id
 
 }
 
