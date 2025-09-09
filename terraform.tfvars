@@ -10,10 +10,10 @@ volume_type = "gp2"
 #ECS
   aws_ecs_cluster_name = "my-ecs-cluster"
   task_definition_family_name = "my-ecs-task"
-  task_definition_cpu = 2
+  task_definition_cpu = 1024
   task_definition_memory = 2046
   container_definitions_name = "first"
-  container_definitions_cpu = 2
+  container_definitions_cpu = 1024
   container_definitions_memory = 2046
   containerPort = 80
   hostPort = 80
