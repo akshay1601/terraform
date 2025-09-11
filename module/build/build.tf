@@ -1,79 +1,8 @@
-
-data "aws_caller_identity" "current" {}
-
-data "aws_region" "current" {}
-
-resource "aws_s3_bucket" "example" {
-  bucket = "akshay-virkhare-code-build-aws-123-v1"
-}
-
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.example.id
-  acl    = "private"
-}
-
-resource "aws_iam_role" "tf-codebuild-role" {
-  name = "tf-codebuild-role"
-
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "codebuild.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-EOF
-
-}
-
-data "aws_iam_policy_document" "tf-cicd-build-policies" {
-    statement{
-        sid = ""
-        actions = ["logs:*", "s3:*", "codebuild:*", "secretsmanager:*","iam:*","codecommit:GitPull"]
-        resources = ["*"]
-        effect = "Allow"
-    }
-}
-
-resource "aws_iam_policy" "tf-cicd-build-policy" {
-    name = "tf-cicd-build-policy"
-    path = "/"
-    description = "Codebuild policy"
-    policy = data.aws_iam_policy_document.tf-cicd-build-policies.json
-}
-
-resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment1" {
-    policy_arn  = aws_iam_policy.tf-cicd-build-policy.arn
-    role        = aws_iam_role.tf-codebuild-role.id
-}
-
-resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment2" {
-    policy_arn  = "arn:aws:iam::aws:policy/PowerUserAccess"
-    role        = aws_iam_role.tf-codebuild-role.id
-}
-
-
-
-resource "aws_codebuild_source_credential" "ghe_token" {
-  auth_type = "PERSONAL_ACCESS_TOKEN"
-  server_type = "GITHUB"
-  token = ""
-}
-
-
-
-resource "aws_codebuild_project" "example" {
-  name          = "test-project"
-  description   = "test_codebuild_project"
+resource "aws_codebuild_project" "codebuild_project" {
+  name          = "aws-code-build-project"
+  description   = "aws-code-build-project"
   build_timeout = "5"
-  service_role  = aws_iam_role.tf-codebuild-role.arn
+  service_role  = var.service_role_arn
 
   artifacts {
     type = "NO_ARTIFACTS"
@@ -85,7 +14,7 @@ resource "aws_codebuild_project" "example" {
     type                        = "LINUX_CONTAINER"
     privileged_mode             = true
     image_pull_credentials_type = "CODEBUILD"
-           environment_variable {
+    environment_variable {
       name  = "AWS_ACCOUNT"
       value = "565314625672"
     }
@@ -105,7 +34,7 @@ resource "aws_codebuild_project" "example" {
 
     s3_logs {
       status   = "ENABLED"
-      location = "${aws_s3_bucket.example.id}/build-log"
+      location = "${var.s3_bucket_id}/build-log"
     }
   }
 
@@ -156,21 +85,5 @@ BUILDSPEC
 
   tags = {
     Environment = "Test"
-  }
-}
-
-resource "aws_codebuild_webhook" "example" {
-  project_name = aws_codebuild_project.example.name
-  build_type   = "BUILD"
-  filter_group {
-    filter {
-      type    = "EVENT"
-      pattern = "PUSH"
-    }
-
-    filter {
-      type    = "HEAD_REF"
-      pattern = "master"
-    }
   }
 }

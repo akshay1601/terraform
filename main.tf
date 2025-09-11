@@ -13,7 +13,6 @@ module "ec2" {
 module "sg" {
   source = "./module/sg"
   vpc_id = module.vpc.vpc_id
-
 }
 
 module "vpc" {
@@ -38,6 +37,7 @@ module "ecs" {
     service_sg = [module.sg.service_sg]
     subnet_id = module.vpc.subnet_id
     target_group_arn = module.alb.target_group_arn
+
 }
 
 module "iam-role" {
@@ -51,4 +51,17 @@ module "alb" {
   vpc_id = module.vpc.vpc_id
   alb_sg = [module.sg.alb_sg]
 
+}
+
+module "build" {
+  source = "./module/build"
+  service_role_arn = module.iam-role.service_role_arn
+  s3_bucket_id = module.s3.s3_bucket_id
+}
+
+module "s3" {
+  source = "./module/s3"
+  bucket_name = var.bucket_name
+  acl = var.acl
+  
 }

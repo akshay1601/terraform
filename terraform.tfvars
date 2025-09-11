@@ -21,3 +21,8 @@ volume_type = "gp2"
   desired_count = 2
   container_image = "227457566609.dkr.ecr.us-east-1.amazonaws.com/moneyuncle"
   tasks-service-role = "moneyuncleecsrole"
+
+
+#build
+ bucket_name= "akshay-virkhare-code-build-aws-123-v1"  
+ acl = "private"

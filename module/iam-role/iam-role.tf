@@ -28,5 +28,3 @@ resource "aws_iam_role" "tf-codebuild-role" {
 EOF
 
 }
-
-
