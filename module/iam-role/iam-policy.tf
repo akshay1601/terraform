@@ -53,8 +53,8 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
         {
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/Test",
-                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/Test:*"
+                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/aws-code-build-project",
+                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/aws-code-build-project:*"
             ],
             "Action": [
                 "logs:CreateLogGroup",
@@ -85,7 +85,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "codebuild:BatchPutCodeCoverages"
             ],
             "Resource": [
-                "arn:aws:codebuild:us-east-1:227457566609:report-group/Test-*"
+                "arn:aws:codebuild:us-east-1:227457566609:report-group/aws-code-build-project-*"
             ]
         }
     ]
