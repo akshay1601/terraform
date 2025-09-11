@@ -28,3 +28,4 @@ variable "aws_ecs_service_name" {}
 variable "desired_count" {}
 
 variable "tasks-service-role" {}
+variable "container_image" {}
