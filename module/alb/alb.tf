@@ -53,7 +53,7 @@ resource "aws_lb_listener" "front_end" {
 resource "aws_lb_listener" "front_end-8080" {
   load_balancer_arn = aws_lb.service_alb.id
   port              = 8080
-  protocol          = "TCP"
+  protocol          = "HTTP"
 
   default_action {
     type             = "forward"
