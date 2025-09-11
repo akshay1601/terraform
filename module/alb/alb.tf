@@ -20,7 +20,7 @@ resource "aws_lb_target_group" "ip-service" {
 }
 
 resource "aws_lb_target_group" "ip-service-8080" {
-  name        = "tf-service-lb-tg"
+  name        = "tf-service-lb-tg-8080"
   port        = 8080
   protocol    = "HTTP"
   target_type = "ip"
