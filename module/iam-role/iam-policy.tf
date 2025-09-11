@@ -59,6 +59,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
+                "ecr:GetAuthorizationToken"
             ]
         },
         {
@@ -82,6 +83,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "codebuild:UpdateReport",
                 "codebuild:BatchPutTestCases",
                 "codebuild:BatchPutCodeCoverages"
+                
             ],
             "Resource": [
                 "arn:aws:codebuild:us-east-1:227457566609:report-group/aws-code-build-project-*"
