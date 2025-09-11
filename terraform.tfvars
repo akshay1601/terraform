@@ -15,8 +15,8 @@ volume_type = "gp2"
   container_definitions_name = "first"
   container_definitions_cpu = 256
   container_definitions_memory = 1024
-  containerPort = 8080
-  hostPort = 8080
+  containerPort = 80
+  hostPort = 80
   aws_ecs_service_name = "my-ecs-service"
   desired_count = 2
 
