@@ -24,5 +24,5 @@ volume_type = "gp2"
 
 
 #build
- bucket_name= "akshay-virkhare-code-build-aws-123-v1"  
+ bucket_name= "code-build-aws-123-v1-latest"  
  acl = "private"
