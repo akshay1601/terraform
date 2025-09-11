@@ -10,6 +10,13 @@ resource "aws_security_group" "service-sg" {
     to_port         = 80
     security_groups = [aws_security_group.alb-sg.id]
   }
+  ingress {
+    protocol    = "tcp"
+    from_port   = 8080
+    to_port     = 8080
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
 
   egress {
     protocol    = "-1"
