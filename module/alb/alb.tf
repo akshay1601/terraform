@@ -56,6 +56,6 @@ resource "aws_lb_listener" "front_end-8080" {
 
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.ip-service.arn
+    target_group_arn = aws_lb_target_group.ip-service-8080.arn
   }
 }
