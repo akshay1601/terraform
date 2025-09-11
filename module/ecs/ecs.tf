@@ -40,16 +40,16 @@ resource "aws_ecs_service" "ecs_service" {
   task_definition = aws_ecs_task_definition.ecs_task_definition.arn
   desired_count   = var.desired_count
   launch_type     = "FARGATE"
-  force_new_deployment = true
+  
   network_configuration {
     security_groups = var.service_sg
     subnets         = var.subnet_id
   
   }
 
-  deployment_controller {
-    type = "CODE_DEPLOY"
-  }
+  # deployment_controller {
+  #   type = "CODE_DEPLOY"
+  # }
 
   load_balancer {
     target_group_arn = var.target_group_arn
