@@ -29,7 +29,7 @@ module "ecs" {
     container_definitions_name = var.container_definitions_name
     container_definitions_cpu = var.container_definitions_cpu
     container_definitions_memory = var.container_definitions_memory
-    container_image = "227457566609.dkr.ecr.us-east-1.amazonaws.com/akshayv1601/java_project"
+    container_image = "227457566609.dkr.ecr.us-east-1.amazonaws.com/moneyuncle"
     execution_role_arn = module.iam-role.tasks-service-role-arn
     containerPort = var.containerPort
     hostPort = var.hostPort
