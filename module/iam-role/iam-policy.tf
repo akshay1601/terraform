@@ -58,7 +58,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
             "Action": [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
-                "logs:PutLogEvents"
+                "logs:PutLogEvents",
                 "ecr:GetAuthorizationToken"
             ]
         },
