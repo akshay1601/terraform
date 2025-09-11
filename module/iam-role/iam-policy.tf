@@ -15,21 +15,82 @@ resource "aws_iam_role_policy_attachment" "tasks-service-role-attachment" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #AWS build policy
-data "aws_iam_policy_document" "tf-cicd-build-policies" {
-    statement{
-        sid = ""
-        actions = ["logs:*", "s3:*", "codebuild:*", "secretsmanager:*","iam:*","codecommit:GitPull"]
-        resources = ["*"]
-        effect = "Allow"
-    }
-}
+# data "aws_iam_policy_document" "tf-cicd-build-policies" {
+#     statement{
+#         sid = ""
+#         actions = ["logs:*", "s3:*", "codebuild:*", "secretsmanager:*","iam:*","codecommit:GitPull"]
+#         resources = ["*"]
+#         effect = "Allow"
+#     }
+# }
 
 resource "aws_iam_policy" "tf-cicd-build-policy" {
     name = "tf-cicd-build-policy"
     path = "/"
     description = "Codebuild policy"
-    policy = data.aws_iam_policy_document.tf-cicd-build-policies.json
+    policy = <<EOF
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/Test",
+                "arn:aws:logs:us-east-1:227457566609:log-group:/aws/codebuild/Test:*"
+            ],
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::codepipeline-us-east-1-*"
+            ],
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:GetObjectVersion",
+                "s3:GetBucketAcl",
+                "s3:GetBucketLocation"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "codebuild:CreateReportGroup",
+                "codebuild:CreateReport",
+                "codebuild:UpdateReport",
+                "codebuild:BatchPutTestCases",
+                "codebuild:BatchPutCodeCoverages"
+            ],
+            "Resource": [
+                "arn:aws:codebuild:us-east-1:227457566609:report-group/Test-*"
+            ]
+        }
+    ]
+}
+EOF
 }
 
 resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment1" {
@@ -37,7 +98,7 @@ resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment1" {
     role        = aws_iam_role.tf-codebuild-role.id
 }
 
-resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment2" {
-    policy_arn  = "arn:aws:iam::aws:policy/PowerUserAccess"
-    role        = aws_iam_role.tf-codebuild-role.id
-}
+# resource "aws_iam_role_policy_attachment" "tf-cicd-codebuild-attachment2" {
+#     policy_arn  = "arn:aws:iam::aws:policy/PowerUserAccess"
+#     role        = aws_iam_role.tf-codebuild-role.id
+# }
