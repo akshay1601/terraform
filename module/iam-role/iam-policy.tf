@@ -59,14 +59,16 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
                 "logs:PutLogEvents",
-                "ecr:GetAuthorizationToken"
+                "ecr:GetAuthorizationToken",
+                "ecr:UploadLayerPart"
+
                 
             ]
         },
         {
             "Effect": "Allow",
             "Resource": [
-                "arn:aws:s3:::codepipeline-us-east-1-*"
+                "*"
             ],
             "Action": [
                 "s3:PutObject",
@@ -87,19 +89,9 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 
             ],
             "Resource": [
-                "arn:aws:codebuild:us-east-1:227457566609:report-group/aws-code-build-project-*"
+                "*"
             ]
-        },
-
-       {
-            "Effect": "Allow",
-            "Action": [
-                "ecr:InitiateLayerUpload"          
-            ],
-            "Resource": [
-                "arn:aws:ecr:us-east-1:227457566609:repository/moneyuncle"
-            ]
-        }        
+        }       
     ]
 }
 EOF
