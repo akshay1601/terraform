@@ -60,8 +60,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "logs:CreateLogStream",
                 "logs:PutLogEvents",
                 "ecr:GetAuthorizationToken",
-                "ecr:UploadLayerPart",
-                "ecr:InitiateLayerUpload"
+                "ecr:*"
 
                 
             ]
