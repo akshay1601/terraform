@@ -46,13 +46,13 @@ resource "aws_lb_listener" "front_end" {
 
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.ip-service.arn
+    # target_group_arn = aws_lb_target_group.ip-service.arn
   }
 }
 resource "aws_lb_listener" "front_end-8080" {
   load_balancer_arn = aws_lb.service_alb.id
   port              = 8080
-  protocol          = "HTTP"
+  protocol          = "HTTP-8080"
 
   default_action {
     type             = "forward"
