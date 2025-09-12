@@ -99,7 +99,7 @@ resource "aws_codebuild_webhook" "userwebpage_repo" {
 
     filter {
       type    = "HEAD_REF"
-      pattern = "master"
+      pattern = "main"
     }
   }
 }
