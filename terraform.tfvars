@@ -19,10 +19,10 @@ volume_type = "gp2"
   containerPort = 80
   hostPort = 80
   aws_ecs_service_name = "my-ecs-service"
-  desired_count = 2
+  desired_count = 1
   tasks-service-role = "moneyuncleecsrole"
   repo_name = "moneyuncle"
 
 #build
- bucket_name= "code-build-aws-123-v1-latest"  
+ bucket_name= "code-build-aws-123-v1-latest-now-day"  
  acl = "private"
