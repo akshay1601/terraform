@@ -24,5 +24,5 @@ volume_type = "gp2"
   repo_name = "moneyuncle"
 
 #build
- bucket_name= "code-build-aws-123-v1-latest-now-day"  
+ bucket_name= "code-build-aws-123-v1-latest"  
  acl = "private"
