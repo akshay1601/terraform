@@ -1,3 +1,4 @@
+#Ec2 variables
 ami = "ami-005fc0f236362e99f"
 instance_type = "t2.medium"
 key_name = "akshay"
@@ -21,7 +22,7 @@ volume_type = "gp2"
   desired_count = 2
   container_image = "227457566609.dkr.ecr.us-east-1.amazonaws.com/moneyuncle"
   tasks-service-role = "moneyuncleecsrole"
-
+  repo_name = "moneyuncle"
 
 #build
  bucket_name= "code-build-aws-123-v1-latest"  

@@ -29,7 +29,7 @@ variable "desired_count" {}
 
 variable "tasks-service-role" {}
 variable "container_image" {}
-
+variable "repo_name" {}
 
 #CodeBuild
 variable "bucket_name" {}

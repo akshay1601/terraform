@@ -37,6 +37,7 @@ module "ecs" {
     service_sg = [module.sg.service_sg]
     subnet_id = module.vpc.subnet_id
     target_group_arn = module.alb.target_group_arn
+    repo_name = var.repo_name
 
 }
 

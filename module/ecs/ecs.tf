@@ -56,4 +56,14 @@ resource "aws_ecs_service" "ecs_service" {
     container_name   = var.container_definitions_name
     container_port   = var.containerPort
   }
+  depends_on = [ aws_ecr_repository.moneyuncle_repo ]
+}
+
+resource "aws_ecr_repository" "moneyuncle_repo" {
+  name                 = var.repo_name
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 }

@@ -21,3 +21,4 @@ variable "desired_count" {}
 variable "service_sg" {}
 variable "subnet_id" {}
 variable "target_group_arn" {}
+variable "repo_name" {}
