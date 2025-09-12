@@ -104,3 +104,24 @@ resource "aws_codebuild_webhook" "userwebpage_repo" {
   }
 }
 
+resource "aws_codebuild_source_credential" "ghe_token" {
+  auth_type = "PERSONAL_ACCESS_TOKEN"
+  server_type = "GITHUB"
+  token       = aws_secretsmanager_secret.codebuild_token_secret.arn
+}
+
+
+data "aws_secretsmanager_secret" "codebuild_token_secret" {
+  name = "codebuild-source-token" # The name of your secret in AWS Secrets Manager
+}
+
+data "aws_secretsmanager_secret_version" "codebuild_token_secret_version" {
+  secret_id = data.aws_secretsmanager_secret.codebuild_token_secret.id
+  # Optional: specify a version_stage or version_id if you need a specific version
+  # version_stage = "AWSCURRENT" # Default
+}
+
+output "secret_value" {
+  value     = data.aws_secretsmanager_secret_version.codebuild_token_secret_version.secret_string
+  sensitive = true # Mark as sensitive to prevent logging in plain text
+}

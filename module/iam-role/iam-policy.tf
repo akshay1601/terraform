@@ -61,6 +61,7 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "logs:PutLogEvents",
                 "ecr:GetAuthorizationToken",
                 "ecr:*"
+                "secretsmanager:GetSecretValue"
 
                 
             ]
