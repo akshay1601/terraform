@@ -9,7 +9,7 @@ variable "task_definition_family_name" {}
 
 #container_definitions
 variable "container_definitions_name" {}
-variable "container_image" {}
+# variable "container_image" {}
 variable "container_definitions_cpu" {}
 variable "container_definitions_memory" {}
 variable "containerPort" {}

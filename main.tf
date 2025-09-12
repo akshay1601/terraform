@@ -28,7 +28,6 @@ module "ecs" {
     container_definitions_name = var.container_definitions_name
     container_definitions_cpu = var.container_definitions_cpu
     container_definitions_memory = var.container_definitions_memory
-    container_image = var.container_image
     execution_role_arn = module.iam-role.tasks-service-role-arn
     containerPort = var.containerPort
     hostPort = var.hostPort
@@ -38,7 +37,7 @@ module "ecs" {
     subnet_id = module.vpc.subnet_id
     target_group_arn = module.alb.target_group_arn
     repo_name = var.repo_name
-
+    
 }
 
 module "iam-role" {

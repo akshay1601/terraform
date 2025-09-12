@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   container_definitions = jsonencode([
     {
       name      = var.container_definitions_name
-      image     = var.container_image
+      image     = aws_ecr_repository.moneyuncle_repo.repository_url
       cpu       = var.container_definitions_cpu
       memory    = var.container_definitions_memory
       essential = true

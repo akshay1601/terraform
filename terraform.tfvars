@@ -20,7 +20,6 @@ volume_type = "gp2"
   hostPort = 80
   aws_ecs_service_name = "my-ecs-service"
   desired_count = 2
-  container_image = "227457566609.dkr.ecr.us-east-1.amazonaws.com/moneyuncle"
   tasks-service-role = "moneyuncleecsrole"
   repo_name = "moneyuncle"
 
