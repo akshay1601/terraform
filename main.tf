@@ -57,6 +57,7 @@ module "build" {
   source = "./module/build"
   service_role_arn = module.iam-role.service_role_arn
   s3_bucket_id = module.s3.s3_bucket_id
+  
 }
 
 module "s3" {
