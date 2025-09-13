@@ -1,5 +1,5 @@
 output "secret_value" {
-  value     = data.aws_secretsmanager_secret_version.codebuild_token_secret_version.secret_string
+  value     = jsondecode(data.aws_secretsmanager_secret_version.codebuild_token_secret_version.secret_string)
   sensitive = true # Mark as sensitive to prevent logging in plain text
 }
 output "github_secret" {
