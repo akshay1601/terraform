@@ -107,7 +107,7 @@ resource "aws_codebuild_webhook" "userwebpage_repo" {
 resource "aws_codebuild_source_credential" "ghe_token" {
   auth_type = "PERSONAL_ACCESS_TOKEN"
   server_type = "GITHUB"
-  token       = local.application_credentials.Token
+  token       = local.application_credentials["Token"]
 }
 
 locals {
