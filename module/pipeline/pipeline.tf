@@ -1,11 +1,11 @@
 
 resource "aws_codepipeline" "codepipeline" {
   name     = "tf-test-pipeline"
-  role_arn = aws_iam_role.codepipeline_role.arn
+  role_arn = var.role_arn_pipeline
 
 
   artifact_store {
-    location = aws_s3_bucket.codepipeline_bucket.bucket
+    location = var.location_s3_pipeline
     type     = "S3"
 
   }
@@ -23,7 +23,7 @@ resource "aws_codepipeline" "codepipeline" {
       configuration = {
         Owner = "akshay1601"
         Repo = "userwebpage"
-        OAuthToken   = jsondecode(data.aws_secretsmanager_secret_version.codebuild_token_secret_version.secret_string)["Token"]
+        OAuthToken   = var.secret_github
         Branch      = "main"
       }
     }
@@ -46,7 +46,7 @@ resource "aws_codepipeline" "codepipeline" {
       version          = "1"
 
       configuration = {
-        ProjectName = aws_codebuild_project.codebuild_project.id
+        ProjectName = var.build_project_name
       }
     }
   }
@@ -82,7 +82,7 @@ resource "aws_codepipeline_webhook" "bar" {
   target_pipeline = aws_codepipeline.codepipeline.name
 
   authentication_configuration {
-    secret_token = jsondecode(data.aws_secretsmanager_secret_version.codebuild_token_secret_version.secret_string)["Token"]
+    secret_token = var.secret_github
   }
 
   filter {

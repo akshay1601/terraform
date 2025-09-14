@@ -69,5 +69,8 @@ module "s3" {
 
 module "pipeline" {
   source = "./module/pipeline"
-  
+  role_arn_pipeline = module.iam-role.aws_iam_role_pipeline
+  location_s3_pipeline = module.s3.codepipeline_bucket
+  secret_github = module.build.github_secret
+  build_project_name = module.build.build_project_name
 }
