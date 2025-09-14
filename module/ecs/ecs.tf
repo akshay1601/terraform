@@ -15,7 +15,7 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
     {
       name      = var.container_definitions_name
       #image     = "${aws_ecr_repository.moneyuncle_repo.repository_url}:latest"
-      image     =  "${data.aws_ecr_image.app_image.repository_url}@${data.aws_ecr_image.app_image.image_digest}"
+      image     =  "${aws_ecr_repository.moneyuncle_repo.repository_url}@${data.aws_ecr_image.app_image.image_digest}"
       cpu       = var.container_definitions_cpu
       memory    = var.container_definitions_memory
       essential = true
