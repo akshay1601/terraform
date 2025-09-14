@@ -1,10 +1,11 @@
+
 resource "aws_codepipeline" "codepipeline" {
   name     = "tf-test-pipeline"
-  role_arn = module.iam-role.codepipeline_role.arn
+  role_arn = aws_iam_role.codepipeline_role.arn
 
 
   artifact_store {
-    location = module.s3.aws_s3_bucket.codepipeline_bucket.bucket
+    location = aws_s3_bucket.codepipeline_bucket.bucket
     type     = "S3"
 
   }
@@ -45,7 +46,7 @@ resource "aws_codepipeline" "codepipeline" {
       version          = "1"
 
       configuration = {
-        ProjectName = module.build.aws_codebuild_project.codebuild_project.id
+        ProjectName = aws_codebuild_project.codebuild_project.id
       }
     }
   }
