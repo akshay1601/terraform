@@ -13,6 +13,6 @@ resource "aws_s3_bucket" "codepipeline_bucket" {
   bucket = "akshayvirkhare1601qwerty12-v1-dasasdasd"
 }
 
-resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
-  bucket = aws_s3_bucket.codepipeline_bucket.id
-}
+# resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
+#   bucket = aws_s3_bucket.codepipeline_bucket.id
+# }
