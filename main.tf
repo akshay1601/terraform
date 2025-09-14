@@ -66,3 +66,8 @@ module "s3" {
   acl = var.acl
   
 }
+
+module "pipeline" {
+  source = "./module/pipeline"
+  
+}
