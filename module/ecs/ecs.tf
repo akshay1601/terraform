@@ -70,8 +70,8 @@ resource "aws_ecr_repository" "moneyuncle_repo" {
   
 }
 
-    data "aws_ecr_image" "app_image" {
-      repository_name = var.repo_name
-      image_tag       = "latest" # Or a specific tag like "v1.0.0"
-      depends_on = [ aws_ecr_repository.moneyuncle_repo ]
-    }
+    # data "aws_ecr_image" "app_image" {
+    #   repository_name = var.repo_name
+    #   image_tag       = "latest" # Or a specific tag like "v1.0.0"
+    #   depends_on = [ aws_ecr_repository.moneyuncle_repo ]
+    # }
