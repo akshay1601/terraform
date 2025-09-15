@@ -97,18 +97,18 @@ resource "aws_codepipeline" "codepipeline" {
 # }
 }
 
-# resource "aws_codepipeline_webhook" "bar" {
-#   name            = "moneyuncle-webhook-github-bar"
-#   authentication  = "GITHUB_HMAC"
-#   target_action   = "Source"
-#   target_pipeline = aws_codepipeline.codepipeline.name
+resource "aws_codepipeline_webhook" "bar" {
+  name            = "moneyuncle-webhook-github-bar"
+  authentication  = "GITHUB_HMAC"
+  target_action   = "Source"
+  target_pipeline = aws_codepipeline.codepipeline.name
 
-#   authentication_configuration {
-#     secret_token = var.secret_github
-#   }
+  authentication_configuration {
+    secret_token = var.secret_github
+  }
 
-#   filter {
-#     json_path    = "$.ref"
-#     match_equals = "refs/heads/{main}"
-#   }
-# }
+  filter {
+    json_path    = "$.ref"
+    match_equals = "refs/heads/{main}"
+  }
+}
