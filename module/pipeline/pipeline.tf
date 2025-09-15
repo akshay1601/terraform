@@ -102,7 +102,7 @@ resource "aws_codepipeline_webhook" "bar" {
   authentication  = "GITHUB_HMAC"
   target_action   = "Source"
   target_pipeline = aws_codepipeline.codepipeline.name
-
+  
   authentication_configuration {
     secret_token = var.secret_github
   }

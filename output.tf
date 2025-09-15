@@ -8,3 +8,7 @@ output "github_secret" {
   value = module.build.github_secret
   sensitive = true
 }
+
+output "codepipeline_webhook_url" {
+  value = module.pipeline.codepipeline_webhook_url
+}
