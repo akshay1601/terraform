@@ -14,8 +14,8 @@ resource "aws_ecs_task_definition" "ecs_task_definition" {
   container_definitions = jsonencode([
     {
       name      = var.container_definitions_name
-      #image     = "${aws_ecr_repository.moneyuncle_repo.repository_url}:latest"
-      image     =  "${aws_ecr_repository.moneyuncle_repo.repository_url}@${data.aws_ecr_image.app_image.image_digest}"
+      image     = "${aws_ecr_repository.moneyuncle_repo.repository_url}:latest"
+      #image     =  "${aws_ecr_repository.moneyuncle_repo.repository_url}@${data.aws_ecr_image.app_image.image_digest}"
       cpu       = var.container_definitions_cpu
       memory    = var.container_definitions_memory
       essential = true
@@ -69,8 +69,8 @@ resource "aws_ecr_repository" "moneyuncle_repo" {
   }
 }
 
-    data "aws_ecr_image" "app_image" {
-      repository_name = var.repo_name
-      image_tag       = "latest" # Or a specific tag like "v1.0.0"
-      depends_on = [ aws_ecr_repository.moneyuncle_repo ]
-    }
+    # data "aws_ecr_image" "app_image" {
+    #   repository_name = var.repo_name
+    #   image_tag       = "latest" # Or a specific tag like "v1.0.0"
+    #   depends_on = [ aws_ecr_repository.moneyuncle_repo ]
+    # }

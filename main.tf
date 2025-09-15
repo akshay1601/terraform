@@ -73,4 +73,5 @@ module "pipeline" {
   location_s3_pipeline = module.s3.codepipeline_bucket
   secret_github = module.build.github_secret
   build_project_name = module.build.build_project_name
+  
 }
