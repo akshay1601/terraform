@@ -97,19 +97,22 @@ resource "aws_codepipeline" "codepipeline" {
 # }
 }
 
-resource "aws_codepipeline_webhook" "bar" {
-  name            = "moneyuncle-webhook-github-bar"
-  authentication  = "GITHUB_HMAC"
-  target_action   = "Source"
-  target_pipeline = aws_codepipeline.codepipeline.name
-  authentication_configuration {
-    secret_token = var.secret_github
-  }
+# Not working when creating with terraform, it not automatically updating to the github webhooks 
+#So better used the aws console webhook, when you done with creating terrafomr, jsut save the code pipeline
+# it will create the webhook that can be used for cicd
+# resource "aws_codepipeline_webhook" "bar" {
+#   name            = "moneyuncle-webhook-github-bar"
+#   authentication  = "GITHUB_HMAC"
+#   target_action   = "Source"
+#   target_pipeline = aws_codepipeline.codepipeline.name
+#   authentication_configuration {
+#     secret_token = var.secret_github
+#   }
 
-  filter {
-    json_path    = "$.ref"
-    match_equals = "refs/heads/{Branch}"
-  }
-}
+#   filter {
+#     json_path    = "$.ref"
+#     match_equals = "refs/heads/{Branch}"
+#   }
+# }
 
 
