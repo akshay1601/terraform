@@ -51,6 +51,28 @@ resource "aws_codepipeline" "codepipeline" {
     }
   }
 
+
+  stage {
+    name = "Deploy"
+
+    action {
+      name            = "Deploy"
+      category        = "Deploy"
+      owner           = "AWS"
+      provider        = "ECS"
+      input_artifacts = ["build_output"]
+      version         = "1"
+
+      configuration = {
+        ClusterName = "my-ecs-cluster"
+        ServiceName  = "my-ecs-service"
+        FileName= imagedefinitions.json
+        
+  }
+  }
+}
+
+
 #   stage {
 #     name = "Deploy"
 
