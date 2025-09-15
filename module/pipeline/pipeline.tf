@@ -112,3 +112,19 @@ resource "aws_codepipeline_webhook" "bar" {
     match_equals = "refs/heads/{main}"
   }
 }
+
+resource "github_repository_webhook" "bar" {
+  repository = "userwebpage"
+
+  name = "web"
+
+  configuration {
+    url          = "https://github.com/akshay1601/userwebpage.git"
+    content_type = "json"
+    insecure_ssl = true
+    secret       = var.secret_github
+  }
+
+  events = ["push"]
+}
+
