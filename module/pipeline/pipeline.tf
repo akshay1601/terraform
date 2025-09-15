@@ -25,7 +25,6 @@ resource "aws_codepipeline" "codepipeline" {
         OAuthToken   = var.secret_github
         Branch      = "main"
         PollForSourceChanges = false
-        webhook = "moneyuncle-webhook-github-bar"
       }
     }
  
