@@ -64,7 +64,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI:latest
-      - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:latest > imageDetail.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:latest > imagedefinitions.json
       - pwd
 artifacts:
   files: 
@@ -78,7 +78,8 @@ artifacts:
         - taskdef.json
     ImageArtifact:
       files:
-        - imageDetail.json  
+        - imageDetail.json
+        - imagedefinitions.json
 BUILDSPEC
 
   }
