@@ -258,7 +258,8 @@ resource "aws_iam_policy" "tf-cicd-build-policy" {
                 "s3:GetObject",
                 "s3:GetObjectVersion",
                 "s3:GetBucketAcl",
-                "s3:GetBucketLocation"
+                "s3:GetBucketLocation",
+                "codepipeline:PutWebhook"
             ]
         },
         {
