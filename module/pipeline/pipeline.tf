@@ -97,22 +97,18 @@ resource "aws_codepipeline" "codepipeline" {
 # }
 }
 
-resource "aws_codepipeline_webhook" "webhook" {
-  name        = "my-pipeline-webhook"
+resource "aws_codepipeline_webhook" "bar" {
+  name            = "moneyuncle-webhook-github-bar"
+  authentication  = "GITHUB_HMAC"
+  target_action   = "Source"
   target_pipeline = aws_codepipeline.codepipeline.name
-  target_action = "Source" # The name of the source action in your CodePipeline
-  authentication = "GITHUB_HMAC" # Or "IP", or "NONE"
   authentication_configuration {
-    secret_token = var.secret_github # A secret token for GitHub HMAC authentication
+    secret_token = var.secret_github
   }
 
   filter {
     json_path    = "$.ref"
-    match_equals = "refs/heads/master" # Trigger for a specific branch
-  }
-
-  tags = {
-    Environment = "Development"
+    match_equals = "refs/heads/{master}"
   }
 }
 

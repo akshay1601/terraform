@@ -4,5 +4,5 @@
 
 output "codepipeline_webhook_url" {
   description = "The URL of the AWS CodePipeline webhook."
-  value       = aws_codepipeline_webhook.webhook.url
+  value       = aws_codepipeline_webhook.bar.url
 }
