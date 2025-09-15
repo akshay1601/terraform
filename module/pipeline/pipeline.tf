@@ -43,7 +43,7 @@ resource "aws_codepipeline" "codepipeline" {
       provider         = "CodeBuild"
       input_artifacts  = ["source_output"]
       output_artifacts = ["build_output"]
-      version          = "1"
+      version          = "2"
 
       configuration = {
         ProjectName = var.build_project_name
@@ -61,7 +61,7 @@ resource "aws_codepipeline" "codepipeline" {
       owner           = "AWS"
       provider        = "ECS"
       input_artifacts = ["build_output"]
-      version         = "1"
+      version         = "2"
 
       configuration = {
         ClusterName = "my-ecs-cluster"
