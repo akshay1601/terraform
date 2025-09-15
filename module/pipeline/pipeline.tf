@@ -24,7 +24,7 @@ resource "aws_codepipeline" "codepipeline" {
         Repo = "userwebpage"
         OAuthToken   = var.secret_github
         Branch      = "main"
-        PollForSourceChanges = false
+        #PollForSourceChanges = false
       }
     }
  
