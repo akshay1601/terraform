@@ -9,6 +9,6 @@ output "github_secret" {
   sensitive = true
 }
 
-output "codepipeline_webhook_url" {
-  value = module.pipeline.codepipeline_webhook_url
-}
+# output "codepipeline_webhook_url" {
+#   value = module.pipeline.codepipeline_webhook_url
+# }
