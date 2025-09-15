@@ -19,12 +19,12 @@ resource "aws_codepipeline" "codepipeline" {
       provider         = "GitHub"
       version          = "1"
       output_artifacts = ["source_output"]
-
       configuration = {
         Owner = "akshay1601"
         Repo = "userwebpage"
         OAuthToken   = var.secret_github
         Branch      = "main"
+        PollForSourceChanges = false
       }
     }
  
@@ -113,18 +113,5 @@ resource "aws_codepipeline_webhook" "bar" {
   }
 }
 
-resource "github_repository_webhook" "bar" {
-  repository = "userwebpage"
 
-  name = "web"
-
-  configuration {
-    url          = "https://github.com/akshay1601/userwebpage.git"
-    content_type = "json"
-    insecure_ssl = true
-    secret       = var.secret_github
-  }
-
-  events = ["push"]
-}
 
